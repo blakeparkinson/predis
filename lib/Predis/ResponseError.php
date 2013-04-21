@@ -32,7 +32,8 @@ class ResponseError implements ResponseErrorInterface
     /**
      * {@inheritdoc}
      */
-    public function getMessage()
+
+    public function relayMessage()
     {
         return $this->message;
     }
@@ -53,6 +54,6 @@ class ResponseError implements ResponseErrorInterface
      */
     public function __toString()
     {
-        return $this->getMessage();
+        return $this->relayMessage();
     }
 }
